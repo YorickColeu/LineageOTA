@@ -52,3 +52,7 @@ RUN chmod -R 0775 /var/www/html \
 
 # create volumes
 VOLUME $FULL_BUILDS_DIR
+
+# add SSL support
+ADD 000-default.conf /etc/apache2/sites-enabled/
+ADD default-ssl.conf /etc/apache2/sites-anabled/
